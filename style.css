@@ -70,8 +70,13 @@ body {
 #news {
   position: relative;
   margin: 9vw;
-  background-image: url ("images/concrete.jpg");
-  z-index: 7;
+}
+
+#cement {
+  position: fixed;
+  width: 100%;
+  opacity: 80%;
+  z-index: 9;
 }
 
 #intro {
@@ -84,8 +89,9 @@ body {
 
 #table {
   position: relative;
-  width: 87%;
-  margin: 3em;
+  width: 82%;
+  margin: 4em;
+  background-image: url("images/concrete.jpg");
 }
 
 a:link {
