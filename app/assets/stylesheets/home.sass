@@ -1,8 +1,14 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 $primaryColor: #2196F3
+$gradientTop: #818A8C
+$gradientBottom: #F4DDB3
+$gradient: linear-gradient($gradientTop, $gradientBottom)
 $sanFrancisco: BlinkMacSystemFont
+$sfLight: 100
+$sfHeavy: 600
+
+body
+  font-family: $sanFrancisco
+  margin-top: 400
 
 #headlineDiv
   background-color: #FFF
@@ -18,32 +24,25 @@ $sanFrancisco: BlinkMacSystemFont
 
 #name
   position: relative
-  color: black
   margin: 0 auto
   text-align: center
-  font-family: $sanFrancisco
   font-weight: 100
   font-size: 60pt
   top: -170px
+  a
+    color: black
+    text-decoration: none
+  a:hover
+    color: white
 
 #description
   position: relative
   color: $primaryColor
   margin: auto
   text-align: center
-  font-family: $sanFrancisco
   font-weight: 600
   font-size: 20pt
   top: -170px
-
-#fixbar
-  position: fixed
-  top: 0px
-  right: 0px
-  width: 100%
-  background: #FFF
-  opacity: .98
-  padding: 20px
 
 video#palms
   position: fixed
