@@ -9,4 +9,27 @@
       <p class="postDescription"><%=post.description%></p>
     </div>
   <% end %>
+  <div class="post">
+    <p class="postTitle">Add a New Post</p>
+    <%= form_for(@post) do |f| %>
+      <div class="formContainer">
+
+        <div class="formEntryContainer">
+          <%= f.label :title, class: "label title" %>
+          <%= f.text_field :title, class: "field titleField" %><br>
+        </div>
+
+        <div class="formEntryContainer">
+          <%= f.label :author, class: "label author" %>
+          <%= f.text_field :author, class: "field authorField" %><br>
+        </div>
+
+        <div class="formEntryContainer">
+          <%= f.label :description, class: "label description" %>
+          <%= f.text_field :description, class: "field descriptionField" %>
+        </div>
+      </div>
+      <%= button_tag "Submit", class: "submit" %>
+    <% end %>
+  </div>
 </div>
