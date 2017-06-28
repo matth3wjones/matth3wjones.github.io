@@ -5,7 +5,7 @@
   <% @posts.each do |post| %>
     <div class="post">
       <p class="postTitle"><%=post.title%></p>
-      <p class="postAuthor">Author: <%=post.author%></p>
+      <p class="postAuthor">Author: </p><p class="authorName"><%=post.author%></p>
       <p class="postDescription"><%=post.description%></p>
     </div>
   <% end %>
