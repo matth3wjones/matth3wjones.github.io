@@ -1,13 +1,9 @@
-$(document).ready(function() {
-  $("#name").mouseover(function(){
-    $("#name").css("color", "#fff");
-    $("#headlineDiv").css("background-color", "#000");
-    $("#description").css("color", "#64B5F6");
-  });
-
-  $("#name").mouseout(function(){
-    $("#name").css("color", "#000");
-    $("#headlineDiv").css("background-color", "#fff")
-    $("#description").css("color", "#2196F3");
-  });
-})
+// $(document).ready(function() {
+//   $("#enter").mouseover(function(){
+//     $("#enter").css("font-weight", "600");
+//   });
+//
+//   $("#enter").mouseout(function(){
+//     $("#enter").css("font-weight", "100");
+//   });
+// })

@@ -1,7 +1,10 @@
 <div id="headlineDiv"></div>
 
-<h1 id="name"><%= link_to 'Matthew Jones', controller: 'posts'%></h1>
+<h1 id="name">Matthew Jones</h1>
 <p id="description"> junior full stack developer </p>
+
+<div id="enterDiv"></div>
+<h2 id="enter"><%= link_to 'enter', controller: 'posts'%></h2>
 
 <video playsinline autoplay muted loop poster="<%= image_path "poster.png" %>" id="palms">
     <source src="<%= video_path "background.mp4" %>" type="video/mp4">

@@ -1,4 +1,5 @@
 $primaryColor: #2196F3
+$secondaryColor: #64B5F6
 $gradientTop: #818A8C
 $gradientBottom: #F4DDB3
 $gradient: linear-gradient($gradientTop, $gradientBottom)
@@ -11,7 +12,7 @@ body
   margin-top: 400
 
 #headlineDiv
-  background-color: #FFF
+  background-color: #000
   opacity: .27
   height: 200px
   width: 700px
@@ -25,24 +26,49 @@ body
 #name
   position: relative
   margin: 0 auto
+  top: -170px
   text-align: center
   font-weight: 100
   font-size: 60pt
-  top: -170px
-  a
-    color: black
-    text-decoration: none
-  a:hover
-    color: white
+  color: #FFF
 
 #description
   position: relative
-  color: $primaryColor
+  color: $secondaryColor
   margin: auto
   text-align: center
   font-weight: 600
   font-size: 20pt
   top: -170px
+
+#enterDiv
+  background-color: #000
+  opacity: .27
+  height: 100px
+  width: 300px
+  margin: auto
+  margin-top: 200px
+  display: flex
+  justify-content: center
+  flex-direction: column
+  border-radius: 7px
+
+#enter
+  position: relative
+  margin: auto
+  top: -85px
+  width: 150px
+  text-align: center
+  font-size: 40pt
+  font-weight: $sfLight
+  color: #FFF
+  a
+    color: #FFF
+    text-decoration: none
+    transition: all 0.5s ease
+  a:hover
+    font-weight: $sfHeavy
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3)
 
 video#palms
   position: fixed
