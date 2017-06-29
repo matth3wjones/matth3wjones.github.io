@@ -1,56 +1,71 @@
 $primaryColor: #2196F3
-$gradientTop: #818A8C
-$gradientBottom: #F4DDB3
-$gradient: linear-gradient($gradientTop, $gradientBottom)
+$gradientTop: #8C9190
+$gradientBottom: #FFFBCC
+$gradient: linear-gradient(to bottom right, $gradientTop, $gradientBottom)
 $sfLight: 100
 $sfHeavy: 600
-
-.newsfeed
-  color: $primaryColor
-  font-weight: $sfLight
-  font-size: 35pt
-  margin: auto
-  margin-top: 100px
-  padding: 15px
-  width: 5em
-  text-align: center
-  background-color: #FFF
-  border-radius: 10px
-  border-bottom-left-radius: 0px
-
-body
-  background-color: $primaryColor
+$sanFrancisco: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande"
 
 #fixbar
   position: fixed
   top: 0px
   right: 0px
   width: 100%
-  background: #FFF
-  opacity: .98
+  background-color: #000
+  opacity: .5
   padding-top: 50px
-  display: inline
-  color: $primaryColor
-  font-weight: $sfHeavy
-  letter-spacing: 2px
+
+#blur
+  position: fixed
+  top: 0px
+  right: 0px
+  width: 100%
+  background-color: #000
+  opacity: .3
+  padding-top: 50px
+  filter: blur(10px)
 
 #fixbarLogo
-  position: absolute
+  position: fixed
   left: 30px
   top: 0px
   display: inline
+  font-family: $sanFrancisco
+  color: #FFF
+  font-weight: 300
+  letter-spacing: 2px
 
 #fixbarHome
-  position: absolute
+  position: fixed
   right: 30px
   top: 0px
   display: inline
+  font-weight: 300
+  letter-spacing: 2px
   a
     text-decoration: none
-    color: $primaryColor
+    color: #FFF
+
+.newsfeedHeadline
+  color: #000
+  font-weight: $sfLight
+  font-size: 35pt
+  margin: auto
+  margin-top: 100px
+  text-align: center
+
+.container
+  position: relative
+
+.innerContainer
+  position: absolute
+  background: $gradient
+  top: -160px
+  z-index: -5
 
 .postContainer
-  position: relative
+  margin-top: 200px
+  margin-bottom: 50px
 
 .post
   width: 80%
@@ -60,6 +75,7 @@ body
   background-color: #fff
   border-radius: 10px
   border-bottom-left-radius: 0px
+  opacity: .5
 
 .postTitle
   padding: 15px
@@ -67,7 +83,6 @@ body
   margin: 30px auto
   font-weight: $sfHeavy
   font-size: 16pt
-  border-bottom: 5px solid $primaryColor
 
 .postAuthor
   position: absolute

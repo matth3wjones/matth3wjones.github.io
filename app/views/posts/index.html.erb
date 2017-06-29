@@ -1,35 +1,42 @@
-<div class="background"></div>
-<h1 class="newsfeed">News</h1>
 
-<div class="postContainer">
-  <% @posts.each do |post| %>
-    <div class="post">
-      <p class="postTitle"><%=post.title%></p>
-      <p class="postAuthor">Author: </p><p class="authorName"><%=post.author%></p>
-      <p class="postDescription"><%=post.description%></p>
-    </div>
-  <% end %>
-  <div class="post">
-    <p class="postTitle">Add a New Post</p>
-    <%= form_for(@post) do |f| %>
-      <div class="formContainer">
+<h1 class="newsfeedHeadline">News</h1>
 
-        <div class="formEntryContainer">
-          <%= f.label :title, class: "label title" %>
-          <%= f.text_field :title, class: "field titleField" %><br>
+<div class="container">
+  <div class="innerContainer">
+    <div class="postContainer">
+
+      <% @posts.each do |post| %>
+        <div class="post">
+          <p class="postTitle"><%=post.title%></p>
+          <p class="postAuthor">Author: </p><p class="authorName"><%=post.author%></p>
+          <p class="postDescription"><%=post.description%></p>
         </div>
+      <% end %>
 
-        <div class="formEntryContainer">
-          <%= f.label :author, class: "label author" %>
-          <%= f.text_field :author, class: "field authorField" %><br>
-        </div>
+      <div class="post">
+        <p class="postTitle">Add a New Post</p>
+        <%= form_for(@post) do |f| %>
+          <div class="formContainer">
 
-        <div class="formEntryContainer">
-          <%= f.label :description, class: "label description" %>
-          <%= f.text_field :description, class: "field descriptionField" %>
-        </div>
+            <div class="formEntryContainer">
+              <%= f.label :title, class: "label title" %>
+              <%= f.text_field :title, class: "field titleField" %><br>
+            </div>
+
+            <div class="formEntryContainer">
+              <%= f.label :author, class: "label author" %>
+              <%= f.text_field :author, class: "field authorField" %><br>
+            </div>
+
+            <div class="formEntryContainer">
+              <%= f.label :description, class: "label description" %>
+              <%= f.text_field :description, class: "field descriptionField" %>
+            </div>
+          </div>
+          <%= button_tag "Submit", class: "submit" %>
+        <% end %>
+        
       </div>
-      <%= button_tag "Submit", class: "submit" %>
-    <% end %>
+    </div>
   </div>
 </div>
