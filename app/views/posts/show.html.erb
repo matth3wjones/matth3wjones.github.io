@@ -2,3 +2,28 @@
 <h1 class="headline"><%= @post.title %></h1>
 
 <div class="innerContainer"></div>
+
+<div class="post showPost">
+  <div class="postAbsoluteTop postAuthor">Author: </div>
+  <div class="postAbsoluteTop authorName"><%=@post.user.username%></div>
+  <div class="postDescription"><%=@post.description%></div>
+</div>
+
+<div class="showComments">
+  <% @post.comments.each do |comment| %>
+    <div class="displayComment"><%=comment.text%></div>
+  <% end %>
+  <div class="displayComment">
+    <%= form_for([@post, @post.comments.build]) do |f| %>
+      <div class="formEntryContainer">
+        <%# f.label :text, class: "name" %>
+        <%# f.text_area :text, placeholder: "enter your name", id: "name" %>
+
+        <%= f.label :text, class: "text" %>
+        <%= f.text_area :text, placeholder: "add a comment", id: "text" %>
+      </div>
+
+      <%= button_tag "Submit", class: "submit" %>
+    <% end %>
+  </div>
+</div>

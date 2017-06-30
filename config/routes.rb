@@ -4,9 +4,10 @@ Rails.application.routes.draw do
   match '/login', to: 'users#login', via: 'get'
   match '/resume', to: 'home#resume', via: 'get'
 
-  resources :posts, except: [:delete]
+  resources :posts do
+    resources :comments
+  end
   resources :users
-  resources :comments
 
   root 'home#index'
 end

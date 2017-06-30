@@ -1,0 +1,26 @@
+@import "mixins"
+
+.showPost
+  margin-top: 50px
+  padding: 20px
+  padding-top: 60px
+  width: 80%
+
+.displayComment
+  @include relativeAutoCenter
+  @include textBubble
+  opacity: .5
+  width: 50%
+  margin: 30px auto
+  padding: 10px
+  font-weight: $sfLight
+
+label.text
+  position: absolute
+  left: 60px
+  top: 20px
+
+textarea#text
+  @include recessedInput
+  width: 60%
+  height: 70px
