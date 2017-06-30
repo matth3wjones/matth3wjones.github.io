@@ -10,6 +10,7 @@
         <p class="postTitle"><%=post.title%></p>
         <p class="postAuthor">Author: </p><p class="authorName"><%=post.user.username%></p>
         <p class="postDescription"><%=post.description%></p>
+        <p class="comment"><%= link_to 'add a comment', new_comment_path %></p>
       </div>
     <% end %>
     <div class="post">

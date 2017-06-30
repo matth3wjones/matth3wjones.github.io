@@ -1,9 +1,9 @@
-<div class="fixbar" id="main">
-</div>
+<div class="fixbar" id="main"></div>
 
-<div class="fixbar" id="blur">
-</div>
+<div class="fixbar" id="blur"></div>
 
 <p class="fixbarText" id="fixbarLogo">matthew jones's portfolio</p>
-<p class="fixbarText" id="fixbarLogin"><%= link_to 'login', login_path %></p>
+  <% unless @disable_resume %>
+    <p class="fixbarText" id="fixbarRésumé"><%= link_to 'résumé', resume_path %></p>
+  <% end %>
 <p class="fixbarText" id="fixbarHome"><%= link_to 'home', root_path %></p>

@@ -12,11 +12,14 @@
   background-color: #000
   opacity: .27
   margin: auto
-  margin-top: 200px
+  margin-top: 150px
   border-radius: 7px
 
 @mixin easeToHeavy
   transition: $easeTransition
+  -webkit-transition: $easeTransition
+  -moz-transition: $easeTransition
+  -o-transition: $easeTransition
   font-weight: $sfHeavy
   text-shadow: $shadow
 
@@ -71,3 +74,10 @@
   color: #000
   font-weight: $sfLight
   text-align: left
+
+@mixin cover
+  position: fixed
+  min-width: 100%
+  min-height: 100%
+  width: auto
+  height: auto

@@ -11,14 +11,10 @@
   @include easeToHeavy
 
 .innerContainer
-  position: fixed
+  @include cover
   background: $gradient
   top: 0px
   z-index: -5
-  min-width: 100%
-  min-height: 100%
-  width: auto
-  height: auto
 
 .postContainer
   margin-top: 50px
@@ -51,10 +47,17 @@
   font-weight: $sfLight
 
 .postDescription
-  padding-bottom: 30px
+  padding-bottom: 50px
   padding-left: 50px
   padding-right: 50px
   font-weight: $sfLight
+
+.comment
+  position: absolute
+  bottom: 0px
+  right: 25px
+  font-weight: $sfHeavy
+  color: $primaryColor
 
 .formContainer
   @include relativeAutoCenter

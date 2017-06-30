@@ -13,5 +13,6 @@
   <body>
     <%= render 'layouts/header' unless @disable_nav %>
     <%= yield %>
+    <%= render 'layouts/footer' unless @disable_foot %>
   </body>
 </html>
