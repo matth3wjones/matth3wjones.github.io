@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   get 'home/index'
 
-  match '/login', to: 'users#login', via: 'get'
-  match '/resume', to: 'home#resume', via: 'get'
+  get    '/resume',  to: 'home#resume'
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
 
   resources :posts do
     resources :comments
