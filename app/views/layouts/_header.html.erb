@@ -4,6 +4,8 @@
 
 <p class="fixbarText" id="fixbarLogo">matthew jones's portfolio</p>
   <% unless @disable_resume %>
-    <p class="fixbarText" id="fixbarRésumé"><%= link_to 'résumé', resume_path %></p>
+    <p class="fixbarText" id="fixbarRésuméorBlog"><%= link_to 'résumé', resume_path %></p>
+  <% else %>
+    <p class="fixbarText" id="fixbarRésuméorBlog"><%= link_to 'blog', controller: 'posts'%></p>
   <% end %>
 <p class="fixbarText" id="fixbarHome"><%= link_to 'home', root_path %></p>

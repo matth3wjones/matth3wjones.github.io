@@ -26,38 +26,62 @@
   opacity: .5
   width: 80%
 
+.post:hover
+  cursor: pointer
+
+.newPost
+  @include relativeAutoCenter
+  @include textBubble
+  opacity: .5
+  width: 80%
+
+.postAbsoluteTop
+  position: absolute
+  top: 20px
+
+.postAbsoluteBottom
+  position: absolute
+  bottom: 20px
+
 .postTitle
   padding: 15px
   text-align: center
   margin: 30px auto
   font-weight: $sfHeavy
   font-size: 16pt
+  a
+    font-weight: $sfHeavy
+    font-size: 16pt
+    text-decoration: none
+    color: #000
 
 .postAuthor
-  position: absolute
+  @include boldBlue
   right: 100px
-  top: 5px
-  font-weight: $sfHeavy
-  color: $primaryColor
 
 .authorName
-  position: absolute
   right: 25px
-  top: 5px
   font-weight: $sfLight
 
 .postDescription
-  padding-bottom: 50px
+  padding-bottom: 60px
   padding-left: 50px
   padding-right: 50px
   font-weight: $sfLight
 
-.comment
-  position: absolute
-  bottom: 0px
+.commentCount
+  @include boldBlue
+  left: 25px
+
+.postComment
+  left: 40px
+
+.addComment
+  @include boldBlue
   right: 25px
-  font-weight: $sfHeavy
-  color: $primaryColor
+  a
+    text-decoration: none
+    color: $primaryColor
 
 .formContainer
   @include relativeAutoCenter

@@ -1,9 +1,5 @@
-// $(document).ready(function() {
-//   $(".newsfeedHeadline").mouseover(function() {
-//     $(".newsfeedHeadline").css("font-weight", "600");
-//   });
-//
-//   $(".newsfeedHeadline").mouseout(function() {
-//     $(".newsfeedHeadline").css("font-weight", "100");
-//   });
-// })
+$(document).ready(function() {
+  $(".post").click(function(){
+    window.location = $(this).find(".postTitle").find("a").attr("href");
+  })
+})
