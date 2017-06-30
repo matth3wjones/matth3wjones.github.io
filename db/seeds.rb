@@ -38,17 +38,17 @@ posts = [
 comments = [
   {
     text: "This looks like a great app!",
-    user_id: 1,
+    name: "matt",
     post_id: 1
   },
   {
     text: "This is a great way to save money on tradeshows!",
-    user_id: 1,
+    name: "gunner",
     post_id: 2
   },
   {
     text: "I could use this app, my employees suck!",
-    user_id: 2,
+    name: "sarge",
     post_id: 2
   }
 ]

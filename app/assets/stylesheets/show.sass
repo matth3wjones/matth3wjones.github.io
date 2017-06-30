@@ -4,6 +4,7 @@
   margin-top: 50px
   padding: 20px
   padding-top: 60px
+  padding-bottom: 0px
   width: 80%
 
 .displayComment
@@ -12,15 +13,45 @@
   opacity: .5
   width: 50%
   margin: 30px auto
-  padding: 10px
+  padding: 50px
   font-weight: $sfLight
+
+.showComments
+  position: relative
+
+.newComment
+  padding: 20px
+  padding-bottom: 130px
+
+.formContainerComment
+  @include relativeAutoCenter
+  width: 45%
+  height: 50px
+  bottom: 50px
+  padding: 10px
+
+label.name
+  position: absolute
+  left: -100px
+  top: 70px
 
 label.text
   position: absolute
-  left: 60px
-  top: 20px
+  left: -100px
+  top: 115px
+
+input#name
+  @include recessedInput
+  top: 50px
+  left: -15px
+  width: 100%
+  font-size: 10pt
 
 textarea#text
   @include recessedInput
-  width: 60%
+  position: absolute
+  top: 110px
   height: 70px
+  width: 88%
+  left: 0px
+  font-size: 10pt

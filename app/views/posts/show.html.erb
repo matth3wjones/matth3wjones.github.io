@@ -10,20 +10,31 @@
 </div>
 
 <div class="showComments">
+
   <% @post.comments.each do |comment| %>
-    <div class="displayComment"><%=comment.text%></div>
+    <div class="displayComment">
+      <div class="postAbsoluteTop postAuthor">Author: </div>
+      <div class="postAbsoluteTop authorName"><%=comment.name%></div>
+      <%=comment.text%>
+    </div>
   <% end %>
-  <div class="displayComment">
+
+  <div class="displayComment newComment">
+
     <%= form_for([@post, @post.comments.build]) do |f| %>
-      <div class="formEntryContainer">
-        <%# f.label :text, class: "name" %>
-        <%# f.text_area :text, placeholder: "enter your name", id: "name" %>
+      <div class="formContainerComment">
+        <div class="formEntryContainer">
+          <%= f.label :name, class: "name" %>
+          <%= f.text_field :name, placeholder: "enter your name", id: "name" %><br>
+        </div>
 
-        <%= f.label :text, class: "text" %>
-        <%= f.text_area :text, placeholder: "add a comment", id: "text" %>
+        <div class="formEntryContainer">
+          <%= f.label :text, class: "text" %>
+          <%= f.text_area :text, placeholder: "add a comment", id: "text" %>
+        </div>
       </div>
-
       <%= button_tag "Submit", class: "submit" %>
     <% end %>
+
   </div>
 </div>
