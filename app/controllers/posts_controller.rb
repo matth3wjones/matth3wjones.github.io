@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def create
     puts post_params
-    Post.create(post_params)
+    # Post.create(post_params)
     @post = Post.new
     @posts = Post.all
     render action: "index"
@@ -14,6 +14,6 @@ class PostsController < ApplicationController
 
   private
     def post_params
-      params.require(:post).permit(:title, :author, :description)
+      params.require(:post).permit(:title, :description)
     end
 end

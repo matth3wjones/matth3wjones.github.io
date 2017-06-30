@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   get 'home/index'
 
-  resources :posts, except: [:delete]
+  match '/login', to: 'users#login', via: 'get'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :posts, except: [:delete]
+  resources :users
+  resources :comments
+
   root 'home#index'
 end

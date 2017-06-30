@@ -1,64 +1,41 @@
-$primaryColor: #2196F3
-$secondaryColor: #64B5F6
-$gradientTop: #818A8C
-$gradientBottom: #F4DDB3
-$gradient: linear-gradient($gradientTop, $gradientBottom)
-$sanFrancisco: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande"
-$sfLight: 100
-$sfHeavy: 600
+@import "variables"
+@import "mixins"
 
 body
   font-family: $sanFrancisco
   margin: 0
 
 #headlineDiv
+  @include transparentBackground
+  @include textBubble
   background-color: #000
-  opacity: .27
   height: 200px
   width: 700px
-  margin: auto
-  margin-top: 200px
-  display: flex
-  justify-content: center
-  flex-direction: column
-  border-radius: 7px
 
 #name
-  position: relative
-  margin: 0 auto
+  @include transparentBackgroundText
   top: -170px
-  text-align: center
-  font-weight: 100
+  font-weight: $sfLight
   font-size: 60pt
-  color: #FFF
 
 #description
-  position: relative
+  @include transparentBackgroundText
   color: $secondaryColor
-  margin: auto
-  text-align: center
-  font-weight: 600
+  font-weight: $sfHeavy
   font-size: 20pt
   top: -170px
 
 #enterDiv
+  @include transparentBackground
+  @include textBubble
   background-color: #000
-  opacity: .27
   height: 100px
-  width: 300px
-  margin: auto
-  margin-top: 200px
-  display: flex
-  justify-content: center
-  flex-direction: column
-  border-radius: 7px
+  width: 500px
 
 #enter
-  position: relative
-  margin: auto
+  @include relativeAutoCenter
   top: -85px
   width: 150px
-  text-align: center
   font-size: 40pt
   font-weight: $sfLight
   color: #FFF
@@ -66,9 +43,7 @@ body
     color: #FFF
     text-decoration: none
   a:hover
-    transition: all 0.5s ease
-    font-weight: $sfHeavy
-    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3)
+    @include easeToHeavy
 
 video#palms
   position: fixed

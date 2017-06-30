@@ -1,0 +1,18 @@
+<h1 class="headline">Log in</h1>
+
+<div class="container">
+  <div class="innerContainer">
+    <div class="loginContainer">
+      <%= form_for(@user) do |f| %>
+        <div class="loginForm">
+          <%= f.label :username, id: "username" %>
+          <%= f.text_field :username, placeholder: "enter username", class: "field", id: "usernameField" %><br>
+
+          <%= f.label :password, id: "password" %>
+          <%= f.password_field :password, placeholder: "enter password", class: "field", id: "passwordField" %><br>
+        </div>
+        <%= button_tag "Submit", class: "submit" %>
+      <% end %>
+    </div>
+  </div>
+</div>
