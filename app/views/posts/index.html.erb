@@ -15,21 +15,5 @@
         <div class="postAbsoluteBottom postComment"> Comments</div>
       </div>
     <% end %>
-    <div class="newPost">
-      <p class="postTitle">Add a New Post</p>
-      <%= form_for(@post) do |f| %>
-        <div class="formContainer">
-          <div class="formEntryContainer">
-            <%= f.label :title, class: "title" %>
-            <%= f.text_field :title, placeholder: "enter title", id: "title" %><br>
-          </div>
-          <div class="formEntryContainer">
-            <%= f.label :description, class: "description" %>
-            <%= f.text_area :description, placeholder: "enter description", id: "description" %>
-          </div>
-        </div>
-        <%= button_tag "Submit", class: "submit" %>
-      <% end %>
-    </div>
   </div>
 </div>
