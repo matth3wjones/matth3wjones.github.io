@@ -1,3 +1,8 @@
-<p class="footbarText">
-  <%= link_to 'admin login', login_path %>
-</p>
+<div class="footbar">
+  <% if user_signed_in? %>
+    <p class="footbarText" id="footbarProfile"><%= link_to 'profile', user_path(current_user) %></p>
+    <p class="footbarText" id="footbarLogout"><%= link_to 'logout', destroy_user_session_path, method: :delete %></p>
+  <% else %>
+    <p class="footbarText" id="footbarLogin"><%= link_to 'admin login', new_user_session_path %></p>
+  <% end %>
+</div>
