@@ -6,6 +6,9 @@
 <div class="post showPost">
   <div class="postAbsoluteTop postAuthor">Author: </div>
   <div class="postAbsoluteTop authorName"><%=@post.user.username%></div>
+  <% if @post.image.exists? %>
+   <div class="postImage"><%=image_tag @post.image.url(:large)%></div>
+  <% end %>
   <div class="postDescription"><%=@post.description%></div>
 </div>
 
