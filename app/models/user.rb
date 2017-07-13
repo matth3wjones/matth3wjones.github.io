@@ -9,5 +9,5 @@ class User < ApplicationRecord
   validates :password, presence: true
   validates :password_confirmation, presence: true
 
-  has_many :posts, class_name: "Post", foreign_key: :author_id
+  has_many :posts, class_name: "Post"
 end

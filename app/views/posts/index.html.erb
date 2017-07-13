@@ -10,6 +10,9 @@
         <div class="postTitle"><%= link_to "#{post.title}", post_path(post.id) %></div>
         <div class="postAbsoluteTop postAuthor">Author: </div>
         <div class="postAbsoluteTop authorName"><%=post.user.username%></div>
+        <% if post.image.exists? %>
+          <div class="postImage"><%=image_tag post.image.url(:medium)%></div>
+        <% end %>
         <div class="postDescription"><%=post.description%></div>
         <div class="postAbsoluteBottom commentCount"><%=post.comments.count%></div>
         <div class="postAbsoluteBottom postComment"> Comments</div>

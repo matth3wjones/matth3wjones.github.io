@@ -33,6 +33,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 # Use Devise for authentication
 gem 'devise'
+# Use Paperclip for image storage
+gem 'paperclip'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
