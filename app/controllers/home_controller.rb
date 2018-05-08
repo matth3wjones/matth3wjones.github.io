@@ -11,5 +11,6 @@ class HomeController < ApplicationController
 
   def profile
     puts "Mr. Templeton"
+    @disable_foot = true
   end
 end
