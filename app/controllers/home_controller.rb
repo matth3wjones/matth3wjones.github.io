@@ -8,4 +8,8 @@ class HomeController < ApplicationController
     @disable_foot = true
     @disable_resume = true
   end
+
+  def profile
+    puts "Mr. Templeton"
+  end
 end

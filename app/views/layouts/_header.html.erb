@@ -3,6 +3,7 @@
 <div class="fixbar" id="blur"></div>
 
 <p class="fixbarText" id="fixbarLogo"><%= link_to "matthew jones's portfolio", root_path %></p>
+<p class="fixbarText" id="fixbarProfile"><%= link_to "about", profile_path %></p>
 
 <% if @disable_resume %>
   <p class="fixbarText" id="fixbarRésuméorBlog"><%= link_to 'blog', controller: 'posts'%></p>

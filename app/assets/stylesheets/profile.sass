@@ -1,0 +1,35 @@
+@import "variables"
+@import "mixins"
+
+.about
+  @include relativeAutoCenter
+  @include textBubble
+  margin-top: 100px
+  width: 70%
+
+.aboutHeader
+  font-size: $sfHeadline
+  font-weight: $sfLight
+  top: 10px
+
+.aboutPhoto
+  display: block
+  position: relative
+  width: 30%
+  left: 0%
+  padding: 30px
+
+.aboutDeets
+  display: block
+  position: absolute
+  width: 60%
+  right: 0%
+  bottom: 0
+  top: 50px
+  padding: 30px
+  text-align: left
+
+.aboutDetails2
+  position: absolute
+  top: 60px
+  right: 50px
