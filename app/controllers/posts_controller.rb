@@ -10,15 +10,15 @@ class PostsController < ApplicationController
   end
 
   def create
-    puts "yo yo yo yo"
-    p params
-    puts "hiiiiiiiiii"
-    p post_params
-    puts "this is the current user: #{current_user.username}"
+    # puts "yo yo yo yo"
+    # p params
+    # puts "hiiiiiiiiii"
+    # p post_params
+    # puts "this is the current user: #{current_user.username}"
     fart = Post.new(post_params)
     fart.user_id = current_user.id
     fart.save!
-    redirect_to root
+    redirect_to '/posts'
   end
 
   private
