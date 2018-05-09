@@ -7,9 +7,6 @@
 .headline
   @include headline
 
-.headline:hover
-  @include easeToHeavy
-
 .innerContainer
   @include cover
   background: $gradient
@@ -23,15 +20,6 @@
 .post
   @include relativeAutoCenter
   @include textBubble
-  width: 80%
-
-.post:hover
-  cursor: pointer
-
-.newPost
-  @include relativeAutoCenter
-  @include textBubble
-  opacity: .5
   width: 80%
 
 .postAbsoluteTop
@@ -74,50 +62,3 @@
 
 .postComment
   left: 40px
-
-.formContainer
-  @include relativeAutoCenter
-  width: 45%
-  height: 150px
-  bottom: 50px
-  padding: 10px
-
-label
-  font-weight: $sfLight
-  color: #000
-
-label.title
-  position: absolute
-  left: -100px
-  top: 25px
-
-label.description
-  position: absolute
-  left: -100px
-  top: 90px
-
-label.image
-  position: absolute
-  left: -100px
-  top: 150px
-
-.formEntryContainer
-  padding: 5px
-
-input#title
-  @include recessedInput
-  font-size: 10pt
-
-textarea#description
-  @include recessedInput
-  top: 10px
-  height: 50px
-  font-size: 10pt
-
-#chooseImage
-  margin: 15px
-  top: 30px
-  font-size: 10pt
-
-.submit
-  @include submitButton
